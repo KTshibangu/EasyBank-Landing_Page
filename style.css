@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Public Sans', sans-serif;
+    
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    background-color: var(--White);
+}
+
+#menu {
+    position: absolute;
+    right: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#close {
+    position: absolute;
+    right: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links ul li{
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    color: var(--White);
+    background: linear-gradient(120deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    transition: 0.5s;
+}
+
+button:hover {
+    background: linear-gradient(120deg, hsl(136, 65%, 70%), hsl(192, 70%, 70%));
+}
+
+.hero {
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-light-gray);
+}
+
+.left {
+    flex-basis: 50%;
+}
+
+.left h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+.left p {
+    color: var(--grayish-blue);
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.right {
+    background-image: url(images/bg-intro-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-basis: 50%;
+}
+
+.right img {
+    width: 100%;
+}
+
+.benefits {
+    padding: 80px 120px;
+    background-color: var(--light-grayish-blue);
+}
+
+.benefits h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+.benefits p {
+    color: var(--grayish-blue);
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.benefits-col {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    place-content: center;
+}
+
+.col-4 {
+    width: 100%;
+    text-align: left;
+}
+
+.col-4 h3 {
+    margin: 20px 0;
+    font-weight: 700;
+    color: var(--grayish-blue);
+}
+
+.articles {
+    padding: 80px 120px;
+    background-color: var(--very-light-gray);
+}
+
+.articles h2 {
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+
+.articles-col {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    place-content: center;
+}
+
+.card-4 {
+    background-color: white;
+    max-width: 340px;
+    text-align: left;
+}
+
+.card-4 .restaurant {
+    height: 228px;
+}
+
+.card-4 img {
+    width: 340px;
+    margin-bottom: 20px;
+}
+
+.card-4 small {
+    padding: 24px;
+    color: var(--grayish-blue);
+}
+
+.card-4 h3 {
+    margin: 10px 0;
+    padding: 0 24px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+
+.card-4 p {
+    font-size: 14px;
+    padding: 0 24px 20px;
+    color: var(--grayish-blue);
+}
+
+footer {
+    background-color: var(--dark-blue);
+    padding: 50px 120px;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr 1fr;
+    gap: 10px;
+}
+
+.footer-col img {
+    filter: brightness(0) invert(1);
+    margin-bottom: 30px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.last-col {
+    text-align: right;
+}
+
+.last-col p {
+    color: var(--bright-cyan);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 965px) {
+    nav {
+        padding: 20px 60px;
+    }
+    
+    .hero {
+        padding: 0 60px;
+    }
+
+    .benefits {
+        padding: 80px 60px;
+    }
+
+    .articles {
+        padding: 80px 60px;
+    }
+
+    footer {
+        padding: 50px 60px;
+    }
+}
+
+@media screen and (max-width: 846px) {
+
+    .left p, 
+    .benefits p {
+        text-align: center;
+    }
+    
+    .hero {
+        padding: 0 30px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .left {
+        text-align: center;
+        padding: 0 0 80px;
+    }
+
+    .benefits {
+        padding: 80px 30px;
+        text-align: center;
+    }
+
+    .col-4 {
+        text-align: center;
+    }
+
+    .articles {
+        padding: 80px 30px;
+    }
+
+    footer {
+        padding: 50px 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col {
+        margin: auto;
+    }
+
+    .footer-col ul li {
+        text-align: center;
+    }
+
+    .last-col {
+        text-align: center;
+    }
+
+    .articles-col {
+        margin-top: 60px;
+        gap: 30px;
+    }
+
+    .card-4 {
+        background-color: white;
+        max-width: 340px;
+        text-align: left;
+        margin: auto;
+    }
+
+    nav {
+        justify-content: initial;
+        align-items: initial;
+        padding: 20px 30px;
+        display: flex;
+    }
+
+    .logo {
+       height: 20px; 
+    }
+
+    .nav-links {
+        position: absolute;
+        bottom: -600%;
+        left: 5%;
+        text-align: center;
+        padding: 30px 0;
+        width: 90%;
+        height: auto;
+        background-color: white;
+        margin: auto;
+        display: none;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    #menu {
+        position: absolute;
+        right: 80px;
+        cursor: pointer;
+        display: block;
+    }
+
+    #close {
+        position: absolute;
+        right: 80px;
+        cursor: pointer;
+        display: none;
+    }
+}
